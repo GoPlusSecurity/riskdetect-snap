@@ -1,12 +1,12 @@
 {
-  "name": "assets-health-detection",
+  "name": "assets-risk-detection",
   "version": "0.1.4",
-  "description": "The 'Hello, world!' of MetaMask Snaps, now written in TypeScript.",
+  "description": "A MetaMask Snap that can detect risks of user assets, supported by GoPlusSecurity.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/GoPlusSecurity/goplus-metamask-snap"
   },
-  "license": "(MIT-0 OR Apache-2.0)",
+  "license": "Apache-2.0",
   "main": "src/index.ts",
   "files": [
     "dist/",

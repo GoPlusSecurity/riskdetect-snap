@@ -1,18 +1,18 @@
 {
   "version": "0.1.4",
-  "description": "Assets Health Detection by GoPlus",
-  "proposedName": "Assets Health Detection",
+  "description": "Assets Risk Detection by GoPlus",
+  "proposedName": "Assets Risk Detection",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/GoPlusSecurity/goplus-metamask-snap"
   },
   "source": {
-    "shasum": "HwFmIovcOnOfTgGZ4WBiAI5Bp6IbuGktQtj2J+F0tGE=",
+    "shasum": "LyaR7FBeFRZ/Zh0MecifPwgbs4JcbGbKqmt/tVVbNn8=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/goplus.svg",
-        "packageName": "assets-health-detection",
+        "packageName": "assets-risk-detection",
         "registry": "https://registry.npmjs.org/"
       }
     }

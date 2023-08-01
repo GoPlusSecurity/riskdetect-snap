@@ -1,6 +1,6 @@
-# assets-health-detection
+# assets-risk-detection
 
-This Snap demonstrates how to develop a Snap with TypeScript.
+A MetaMask Snap that can detect risks of user assets, supported by GoPlusSecurity.
 
 ## Notes
 
