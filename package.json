@@ -1,12 +1,12 @@
 {
-  "name": "assets-risk-detection",
+  "name": "@goplus/riskdetect-snap",
   "version": "0.1.4",
   "description": "A MetaMask Snap that can detect risks of user assets, supported by GoPlusSecurity.",
   "repository": {
     "type": "git",
     "url": "https://github.com/GoPlusSecurity/goplus-metamask-snap"
   },
-  "license": "Apache-2.0",
+  "license": "(MIT-0 OR Apache-2.0)",
   "main": "src/index.ts",
   "files": [
     "dist/",

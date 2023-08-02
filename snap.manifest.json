@@ -7,12 +7,12 @@
     "url": "https://github.com/GoPlusSecurity/goplus-metamask-snap"
   },
   "source": {
-    "shasum": "LyaR7FBeFRZ/Zh0MecifPwgbs4JcbGbKqmt/tVVbNn8=",
+    "shasum": "J73r5xqrh1ycv2Ce/NoPvAfSqqyXjR84AY3smkq2PbE=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/goplus.svg",
-        "packageName": "assets-risk-detection",
+        "packageName": "@goplus/riskdetect-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }

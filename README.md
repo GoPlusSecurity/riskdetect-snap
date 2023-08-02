@@ -1,4 +1,4 @@
-# assets-risk-detection
+# @goplus/riskdetect-snap
 
 A MetaMask Snap that can detect risks of user assets, supported by GoPlusSecurity.
 
