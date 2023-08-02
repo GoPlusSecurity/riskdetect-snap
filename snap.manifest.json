@@ -4,7 +4,7 @@
   "proposedName": "Assets Risk Detection",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoPlusSecurity/goplus-metamask-snap"
+    "url": "https://github.com/GoPlusSecurity/riskdetect-snap"
   },
   "source": {
     "shasum": "J73r5xqrh1ycv2Ce/NoPvAfSqqyXjR84AY3smkq2PbE=",
