@@ -1,6 +1,6 @@
 {
   "name": "@goplus/riskdetect-snap",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A MetaMask Snap that can detect risks of user assets, supported by GoPlusSecurity.",
   "repository": {
     "type": "git",

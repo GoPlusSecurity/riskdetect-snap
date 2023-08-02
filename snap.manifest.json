@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Assets Risk Detection by GoPlus",
   "proposedName": "Assets Risk Detection",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/GoPlusSecurity/riskdetect-snap"
   },
   "source": {
-    "shasum": "J73r5xqrh1ycv2Ce/NoPvAfSqqyXjR84AY3smkq2PbE=",
+    "shasum": "CP4T3IhUMaDa5Xsfqb16z1dJeHPrXP9thH9xsfLnkWs=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
