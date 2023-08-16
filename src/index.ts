@@ -42,8 +42,7 @@ async function getAccounts() {
  * @throws If the request method is not valid for this snap.
  */
 export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
-  const { chainId } = request.params;
-  console.log(request.method);
+  let { chainId } = request.params;
   switch (request.method) {
     case 'token_detection':
       return getAccounts().then(async (accounts) => {
@@ -69,6 +68,8 @@ export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
               ),
             );
           });
+        } else {
+          throw new Error(res.message);
         }
 
         if (panelArr.length === 0) {
