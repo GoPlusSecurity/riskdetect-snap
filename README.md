@@ -59,8 +59,7 @@ export const connectSnap = async (
 /**
  * Invoke the "token_detection" method from the snap.
  */
-export const getTokenDetetion = async (address, chainId) => {
-  
+export const getTokenDetetion = async (chainId) => {
     await window.ethereum.request({
         method: 'wallet_invokeSnap',
         params: {
@@ -68,7 +67,6 @@ export const getTokenDetetion = async (address, chainId) => {
             request: {
                 method: 'token_detection',
                 params: {
-                    address,
                     chainId,
                 },
             },
