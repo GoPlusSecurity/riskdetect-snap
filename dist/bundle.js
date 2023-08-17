@@ -9071,6 +9071,7 @@
       exports.onRpcRequest = void 0;
       var _snapsUi = require("@metamask/snaps-ui");
       var _utils = require("@metamask/utils");
+      var _utils2 = require("./utils");
       async function getAccounts() {
         const accounts = await ethereum.request({
           method: 'eth_requestAccounts'
@@ -9082,16 +9083,16 @@
         origin,
         request
       }) => {
-        let {
-          chainId
-        } = request.params;
         switch (request.method) {
           case 'token_detection':
             return getAccounts().then(async accounts => {
+              const chainId = await ethereum.request({
+                method: 'eth_chainId'
+              });
               if (!accounts.length) {
                 throw new Error('Get the Ethereum accounts Fail.');
               }
-              const res = await getData(accounts[0], chainId);
+              const res = await getData(accounts[0], (0, _utils2.hex2int)(chainId));
               const panelArr = [];
               if (res.code === 1) {
                 res.result.forEach(item => {
@@ -9129,8 +9130,22 @@
         return response.json();
       }
     }, {
+      "./utils": 103,
       "@metamask/snaps-ui": 2,
       "@metamask/utils": 31,
+      "buffer/": 48
+    }],
+    103: [function (require, module, exports) {
+      globalThis.Buffer = require('buffer/').Buffer;
+      "use strict";
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+      exports.hex2int = hex2int;
+      function hex2int(hex) {
+        return hex ? parseInt(hex.toString(), 16) : null;
+      }
+    }, {
       "buffer/": 48
     }]
   }, {}, [102])(102);
