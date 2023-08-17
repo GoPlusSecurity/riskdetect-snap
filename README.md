@@ -59,16 +59,14 @@ export const connectSnap = async (
 /**
  * Invoke the "token_detection" method from the snap.
  */
-export const getTokenDetetion = async (chainId) => {
+export const getTokenDetetion = async () => {
     await window.ethereum.request({
         method: 'wallet_invokeSnap',
         params: {
             snapId: 'npm:@goplus/riskdetect-snap',
             request: {
                 method: 'token_detection',
-                params: {
-                    chainId,
-                },
+                params: {},
             },
         },
     });

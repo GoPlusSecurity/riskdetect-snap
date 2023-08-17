@@ -5,6 +5,7 @@ import {
   text,
 } from '@metamask/snaps-ui';
 import { assert } from '@metamask/utils';
+import { hex2int } from './utils';
 
 /**
  * Get the Ethereum accounts that the snap has access to using the `ethereum`
@@ -42,14 +43,14 @@ async function getAccounts() {
  * @throws If the request method is not valid for this snap.
  */
 export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
-  let { chainId } = request.params;
   switch (request.method) {
     case 'token_detection':
       return getAccounts().then(async (accounts) => {
+        const chainId = await ethereum.request({ method: 'eth_chainId' });
         if (!accounts.length) {
           throw new Error('Get the Ethereum accounts Fail.');
         }
-        const res = await getData(accounts[0], chainId);
+        const res = await getData(accounts[0], hex2int(chainId as string));
         const panelArr: any = [];
         if (res.code === 1) {
           res.result.forEach((item: any) => {
@@ -100,7 +101,7 @@ export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
  * @param _chainId - chain id
  * @returns Array.
  */
-async function getData(address: string, _chainId: string) {
+async function getData(address: string, _chainId: number | null) {
   const response = await fetch(`https://gis-api.gopluslabs.io/api/v1/security/address/list/${_chainId}?address=${address}&type=TOKEN`);
   return response.json();
 }
